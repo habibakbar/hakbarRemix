@@ -1,0 +1,196 @@
+/* Apply a natural box layout model to all elements. 
+Padding and border will not affect the width. */
+* { 
+ 	-moz-box-sizing: border-box; 
+ 	-webkit-box-sizing: border-box; 
+ 	box-sizing: border-box; 
+}
+
+
+body {
+	/* remove default spaces */
+	padding: 0;
+	margin: 0;
+	/* setting common type styles */
+	font-family: 'OpenSansLight', Arial, sans-serif;
+	color: #9db0ac;
+	background: #1B1B1B;
+}
+/* remove defaults */
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+	color: #ED3A97;
+}
+
+/* reset lists */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+a {
+	/* override default styles */
+	text-decoration: none;
+	outline: none; /* removes dotted border from Firefox */
+	color: #9db0ac;
+}
+a:hover {
+	color: #d9a50c;
+}
+
+p {
+	margin: 0;
+}
+
+@media (min-width: 1024px) {
+
+	header {
+		margin: 100px 100px;
+	}
+
+	header h1 {
+		float: left;
+	}
+	nav {
+		float: right;
+	}
+
+	nav li {
+		display: inline-block;
+		font-size: 20px;
+	}
+
+	.punchLines {
+		width: 33%;
+		display: inline-block;
+		margin-bottom: 25px;
+	}
+
+	
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	header h1 span {
+		display: none;
+	}
+
+}
+
+/*work boxes media queries*/
+
+@media all and (min-width: 27em) {
+	.grid li {
+			width: 50%;
+			float: left;
+			}
+		}
+@media all and (min-width: 40em) {
+	.grid li {
+			width: 33.3333333%;
+			}
+	.grid li.wide {
+			width: 66.666666%;
+			}
+		}
+@media all and (min-width: 60em) {
+	.grid li {
+			width: 25%;
+			}
+	.grid li.wide {
+			width: 50%;
+			}
+		}
+
+/*desktop styling*/
+
+header {
+	/*border: 1px solid green;*/
+	max-width: 100%;
+	text-align: center;
+	padding: 40px 40px;
+	margin-top: 30px;
+	margin-bottom: 80px;
+}
+
+header h1 {
+	font-size: 50px;
+	/*letter-spacing: 2px;*/
+}
+
+header h1:hover {
+	color: #FFF;
+}
+
+header h1 span {
+	color: #ADADAD;
+	font-size: 20px;
+}
+
+/*navigation styling*/
+nav {
+	max-width: 100%;
+	list-style: none;
+	/*border: 1px solid red;*/
+	text-align: center;
+	cursor: pointer;
+}
+
+nav li {
+	color: #FFF;
+	/*letter-spacing: 5px;*/
+	font-size: 20px;
+	padding: 30px 30px;
+}
+
+nav li:hover {
+	color: #ED3A97;
+}
+
+
+/*punchLines styling*/
+
+.punchBox {
+	/*border: 1px solid red;*/
+	margin: 20px 20px;
+}
+.punchLines h3 {
+	
+	color: #ADADAD;
+	font-size: 26px;
+	padding: 30px 30px;
+	text-align: center;
+	/*border: 1px solid green;*/
+}
+
+.punchLines h3 span {
+	color: #FFF;
+}
+
+
+/*work boxes styling*/
+.grid {
+  	overflow: hidden;
+	padding: 0.5em 0 0 0.5em;
+	max-width: 76em;
+	margin: 0 auto;
+}
+.grid li {
+	padding: 0 0.5em 0.5em 0;
+		}
+.grid li > div {
+	background: #808080;
+	padding: 7em 2em;
+	text-align: center;
+		}
+.grid li a {
+	color: #fff;
+		}
+
