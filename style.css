@@ -1,0 +1,417 @@
+/* Apply a natural box layout model to all elements. 
+Padding and border will not affect the width. */
+* { 
+ 	-moz-box-sizing: border-box; 
+ 	-webkit-box-sizing: border-box; 
+ 	box-sizing: border-box; 
+}
+
+
+body {
+	/* remove default spaces */
+	padding: 0;
+	margin: 0;
+	/* setting common type styles */
+	font-family: 'OpenSansLight', Arial, sans-serif;
+	color: #9db0ac;
+	background: #1B1B1B;
+}
+/* remove defaults */
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+	color: #ED3A97;
+}
+
+/* reset lists */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+a {
+	/* override default styles */
+	text-decoration: none;
+	outline: none; /* removes dotted border from Firefox */
+	color: #9db0ac;
+}
+a:hover {
+	color: #d9a50c;
+}
+
+p {
+	margin: 0;
+}
+
+@media (min-width: 1224px) {
+
+	header {
+		margin: 100px 100px;
+		padding: 40px 40px;
+		margin-top: 30px;
+		margin-bottom: 45px;
+	}
+
+	header h1 {
+		float: left;
+		font-size: 50px;
+	}
+
+	header h1 span {
+		font-size: 25px;
+	}
+	nav {
+		float: right;
+	}
+
+	nav li {
+		display: inline-block;
+		font-size: 20px;
+		padding: 30px 30px;
+	}
+
+	.punchBox {
+	/*border: 1px solid red;*/
+	margin: 20px 20px;
+}
+
+	.punchLines {
+		width: 33%;
+		display: inline-block;
+		margin-bottom: 25px;
+	}
+
+	.punchLines h3 {
+		font-size: 26px;
+		padding: 30px 30px;
+	}
+
+	.resume {
+		margin: 20px 20px;
+		padding: 20px 20px;
+	}
+
+	.innerResume {
+		width: 55%;
+	}
+
+	.innerResume h1 {
+		padding: 50px 50px;
+		font-size: 35px;
+	}
+
+	.footer p {
+		padding: 50px 50px;
+	}
+
+	.innerFooter {
+		padding: 40px 40px;
+	}
+
+	.footer span {
+		font-size: 30px;
+	}
+
+	
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	header {
+		margin-top: 50px;
+	}
+
+	header h1 {
+		font-size: 60px;
+		margin-bottom: 50px;
+	}
+
+	header h1 span {
+		font-size: 40px;
+	}
+
+	nav li {
+		font-size: 50px;
+		padding: 50px 50px;
+	}
+
+	.punchLines h3 {
+		font-size: 33px;
+		padding: 40px 40px;
+	}
+
+	.resume {
+		margin: 20px 20px;
+		padding: 20px 20px;
+	}
+
+	.innerResume {
+		width: 100%;
+	}
+
+	.innerResume h1 {
+		padding: 50px 50px;
+		font-size: 35px;
+	}
+
+	.footer p {
+		padding: 50px 50px;
+	}
+
+	.innerFooter {
+		padding: 40px 40px;
+	}
+
+	.footer span {
+		font-size: 30px;
+	}
+
+
+
+
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+	header h1 span {
+		display: none;
+	}
+
+	.punchLines h3 {
+		font-size: 22px;
+		padding: 50px 50px;	
+	}
+
+	.resume {
+		margin: 20px 20px;
+		padding: 20px 20px;
+	}
+
+	.innerResume {
+		width: 100%;
+	}
+
+	.innerResume h1 {
+		padding: 50px 50px;
+		font-size: 30px;
+	}
+
+	.footer p {
+		padding: 50px 50px;
+	}
+
+	.innerFooter {
+		padding: 40px 40px;
+	}
+
+	.footer span {
+		font-size: 30px;
+	}
+}
+/* Landscape phones and down */
+@media (min-device-width : 320px) and (max-width: 480px) {
+
+	header {
+		margin-top: 50px;
+	}
+
+	header h1 {
+		font-size: 54px;
+	}
+
+	header h1 span {
+		display: none;
+	}
+
+	nav {
+		width: 100%;
+		padding: 40px 40px;
+		margin-top: -75px;
+	}
+
+	nav li {
+		font-size: 50px;
+	}
+
+	.punchLines h3 {
+		font-size: 25px;
+		padding: 60px 60px;
+	}
+
+	.resume {
+		margin: 20px 20px;
+		padding: 20px 20px;
+	}
+
+	.innerResume {
+		width: 100%;
+	}
+
+	.innerResume h1 {
+		padding: 50px 50px;
+		font-size: 20px;
+	}
+
+	.footer p {
+		padding: 50px 50px;
+	}
+
+	.innerFooter {
+		padding: 40px 40px;
+	}
+
+	.footer span {
+		font-size: 30px;
+	}
+
+}
+
+/*work boxes media queries*/
+
+@media all and (min-width: 27em) {
+	.grid li {
+			width: 50%;
+			float: left;
+			}
+		}
+@media all and (min-width: 40em) {
+	.grid li {
+			width: 33.3333333%;
+			}
+	.grid li.wide {
+			width: 66.666666%;
+			}
+		}
+@media all and (min-width: 60em) {
+	.grid li {
+			width: 25%;
+			}
+	.grid li.wide {
+			width: 50%;
+			}
+		}
+
+/*desktop styling*/
+
+header {
+	/*border: 1px solid green;*/
+	text-align: center;
+	
+}
+
+header h1 {
+	font-family: 'Cabin', sans-serif;
+}
+
+header h1:hover {
+	color: #FFF;
+}
+
+header h1 span {
+	color: #ADADAD;
+	font-family: 'Dancing Script', cursive;
+	
+}
+
+/*navigation styling*/
+nav {
+	list-style: none;
+	/*border: 1px solid red;*/
+	text-align: center;
+	cursor: pointer;
+}
+
+nav li {
+	color: #FFF;
+	/*letter-spacing: 5px;*/
+	
+}
+
+nav li:hover {
+	color: #ED3A97;
+}
+
+
+/*punchLines styling*/
+
+
+.punchLines h3 {
+	
+	color: #ADADAD;
+	text-align: center;
+	/*border: 1px solid green;*/
+}
+
+.punchLines h3 span {
+	color: #FFF;
+}
+
+
+/*work boxes styling*/
+.grid {
+  	overflow: hidden;
+	padding: 0.5em 0 0 0.5em;
+	max-width: 76em;
+	margin: 0 auto;
+}
+.grid li {
+	padding: 0 0.5em 0.5em 0;
+		}
+.grid li > div {
+	background: #808080;
+	padding: 7em 2em;
+	text-align: center;
+		}
+.grid li a {
+	color: #fff;
+		}
+
+.grid li > div:hover {
+	background: #ED3A97;
+}
+
+
+/*resume styling*/
+.resume {
+	text-align: center;
+	/*border: 1px solid white;*/
+}
+
+.innerResume {
+	margin: 0 auto;
+}
+
+.innerResume h1 {
+	font-family: 'Cabin', sans-serif;
+	color: #FFF;
+	border: 1px solid #FFF;
+	cursor: pointer;
+}
+
+.innerResume h1:hover {
+	background: #ED3A97;
+}
+
+/*footer styling*/
+.footer {
+	text-align: center;
+	/*border: 1px solid red;*/
+}
+
+.footer p {
+	color: #ED3A97; 
+}
+
+.footer span {
+	font-family: 'Dancing Script', cursive;
+}
+
+.footer span:hover {
+	color: #FFF;
+}
+
+.innerFooter {
+	/*border: 1px solid white;*/
+	cursor: pointer;
+
+}
