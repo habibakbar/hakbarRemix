@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hakbar.com</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- SMOOTHSCROLL -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Habib Akbar/<span>creative web developer</span>
+		</h1>
+			<nav>
+				<li><a href="#work"></a>Work.</li>
+				<li><a href="#resume"></a>Resume.</li>
+				<li><a href="#contact"></a>Contact.</li>
+			</nav>
+	</header>
+		
+	<div class="punchBox">
+		<div class="punchLines">
+			<h3>I am a <span>creative Web Developer</span> with extensive mobile first design experience.</h3>
+		</div>
+		<div class="punchLines">
+			<h3>A passion for beautiful, <span>maintainable code,</span> an eye for <span>good design/UX,</span> and super­human <span>attention to detail.</span></h3>
+		</div>
+		<div class="punchLines">
+			<h3>Creating <span>reliable,accesible digital experiences for users.</span>  Let's streamline your business with <span>Wordpress.</span></h3>
+		</div>
+	</div><!-- end of punchLines-->
+	<div class="work" id="work">
+		<ul class="grid">
+					<li>
+						<div>
+							<a href="">1</a>
+						</div>
+						<!-- <p>yo bro this is a test</p> -->
+					</li>
+					<li>
+						<div>
+							<a href="#">2</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="#">3</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="#">4</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="#">5</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="#">6</a>
+						</div>
+					</li>
+		</ul><!-- end of grid -->
+	</div><!-- end of work -->
+
+	<div class="resume" id="resume">
+		<div class="innerResume">
+			<h1>Download my resume<a class="#" href="myresume.pdf"></a>
+			</h1>
+		</div><!-- end of innerResume -->
+	</div><!-- end of resume -->
+
+	<div class="footer" id="contact">
+		<div class="innerFooter">
+			<!-- <a href="email" class="email" target="blank"></a>
+			<img src="images/inbox.png" height="64" width="64" alt=""> -->
+			<a href="http://facebook.com" class="fb" target="blank"></a>
+			<img src="images/like.png" height="64" width="64" alt="">
+			<a href="http://twitter.com/hakbvr" class="twitter" target="blank"></a>
+			<img src="images/twit.png" height="64" width="64" alt="">
+			<a href="http://linkedin.com" class="linkedIn" target="blank"></a>
+			<img src="images/linkedin.png" height="64" width="64" alt="">
+			<a href="#" class-"github" target="blank"></a>
+			<img src="images/github.png" height="64" width="64" alt="">
+		</div><!-- end of innerFooter -->
+		<a href="#"><span>habib@hakbar.com</span></a>
+		<p>&copy; Habib Akbar 2014</p>
+	</div><!-- end of footer -->
+	<!-- SMOOTHSCROLL SCRIPT -->
+	<script>
+
+		$('a').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    	}, 800);
+	    return false;
+	});
+	</script><!-- END OF SMOOTHSCROLL SCRIPT -->
+</body>
+</html>
